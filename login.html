@@ -36,11 +36,36 @@
         max-width: 255px;
       }
 
+      .image {
+        width: 480px;
+        height: 705px;
+        background-image: url('https://raw.githubusercontent.com/jakubkarabula/newlogin/master/Login.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .logo {
+        background-image: url('https://raw.githubusercontent.com/jakubkarabula/newlogin/master/_Logo_negativ.png');
+        background-size: 232px 278px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: rgba(97, 155, 49, 0.71);
+        width: 100%;
+        height: 100%;
+      }
+
+      form {
+        padding: 90px 56px;
+      }
+
       main {
-        padding: 90px 56px 90px 536px;
         border-radius: 5px;
         box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.05);
         background-color: #ffffff;
+        display: flex;
       }
 
       hr {
@@ -88,9 +113,14 @@
     </style>
 
     <main>
-      <h1>Sign in with your existing account</h1>
-      <hr />
-      <div id="api"></div>
+      <div class="image">
+        <div class="logo"></div>
+      </div>
+      <form>
+        <h1>Sign in with your existing account</h1>
+        <hr />
+        <div id="api"></div>
+      </form>
     </main>
   </body>
 </html>
