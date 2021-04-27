@@ -124,6 +124,17 @@
         width: 100%;
         height: 50px;
       }
+
+      .forget-password {
+        display: block;
+        margin-top: 10px;
+      }
+
+      /* hiding default ad b2c form items */
+
+      #forgotPassword {
+        display: none;
+      }
     </style>
 
     <main>
@@ -134,6 +145,10 @@
         <h1>Sign in with your existing account</h1>
         <hr />
         <div id="api"></div>
+
+        <a href="https://b2b.hellofreshgo.de/forget-password" class="forget-password">
+          Forgot password? You can reset it here
+        </a>
       </div>
       <iframe
         class="cookie-banner"
