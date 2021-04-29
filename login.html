@@ -11,6 +11,18 @@
       href="https://fonts.googleapis.com/css2?family=Rufina:wght@700&display=swap"
       rel="stylesheet"
     />
+    <script>
+      window.addEventListener(
+        'message',
+        (event) => {
+          console.log(event)
+
+          if (event.isTrusted) {
+          }
+        },
+        false,
+      )
+    </script>
   </head>
   <body>
     <style>
@@ -159,18 +171,5 @@
         src="https://localhost:5001/CookieBanner.html"
       />
     </main>
-
-    <script>
-      window.addEventListener(
-        'message',
-        (event) => {
-          console.log(event)
-
-          if (event.isTrusted) {
-          }
-        },
-        false,
-      )
-    </script>
   </body>
 </html>
