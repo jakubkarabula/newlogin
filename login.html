@@ -146,14 +146,31 @@
         <hr />
         <div id="api"></div>
 
-        <a href="https://b2b.hellofreshgo.de/forgot-password" class="forget-password">
+        <a
+          href="https://b2b.hellofreshgo.de/forgot-password"
+          class="forget-password"
+        >
           Forgot password? You can reset it here
         </a>
       </div>
       <iframe
         class="cookie-banner"
-        src="https://b2b.hellofreshgo.de/CookieBanner.html"
+        name="cookie-banner"
+        src="https://localhost:5001/CookieBanner.html"
       />
     </main>
+
+    <script>
+      window.addEventListener(
+        'message',
+        (event) => {
+          console.log(event)
+
+          if (event.isTrusted) {
+          }
+        },
+        false,
+      )
+    </script>
   </body>
 </html>
