@@ -15,9 +15,10 @@
       window.addEventListener(
         'message',
         (event) => {
-          console.log(event)
-
           if (event.isTrusted) {
+            if (event.data === 'hide_cookie_banner') {
+              document.querySelector('.cookie-banner').style.display = 'none'
+            }
           }
         },
         false,
