@@ -259,9 +259,9 @@
         </div>
     </div>
     <script>
-        console.lot('INIT')
+        console.log('INIT')
         document.body.onload = () => {
-            console.lot('ONLOAD')
+            console.log('ONLOAD')
             document.querySelectorAll('input').forEach((input) => {
                 input.addEventListener('input', () => {
                     document.querySelectorAll('input:valid').forEach(node => { node.previousElementSibling.querySelector('p').style.display = 'none' })
