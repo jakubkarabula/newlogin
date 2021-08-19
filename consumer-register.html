@@ -159,7 +159,7 @@
 
     input {
         line-height: 2;
-        color: rgba(0,0,0,.85);
+        color: #393939;
         border: 1px solid #bfbfbf;
         padding: 3px 11px;
         border-radius: 10px;
@@ -222,6 +222,16 @@
         display: flex;
         flex-direction: column;
         margin-bottom: 16px;
+    }
+
+    .validate input:invalid {
+        color: #ff4d4f;
+        border: 1px solid #ff4d4f;
+    }
+
+    .validate input:valid {
+        color: #393939;
+        border: 1px solid #bfbfbf;
     }
     </style>
 
