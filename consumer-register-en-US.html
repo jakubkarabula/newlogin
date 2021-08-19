@@ -187,7 +187,7 @@ li {
 }
 
 .helpLink {
-    display: none;
+    font-size: 0;
 }
 
 .buttons {
@@ -234,6 +234,13 @@ li {
     color: #393939;
     border: 1px solid #bfbfbf;
 }
+
+.validate #email:invalid + a::after {
+    content: 'Invalid email format';
+    color: #ff4d4f;
+    font-size: 1rem;
+}
+
     </style>
     <script src="https://raw.githubusercontent.com/jakubkarabula/newlogin/master/consumer-register.js"></script>
   </head>
@@ -260,21 +267,5 @@ li {
             </div>
         </div>
     </div>
-    <script>
-        console.log('INIT')
-        document.body.onload = () => {
-            console.log('ONLOAD')
-            document.querySelectorAll('input').forEach((input) => {
-                input.addEventListener('input', () => {
-                    document.querySelectorAll('input:valid').forEach(node => { node.previousElementSibling.querySelector('p').style.display = 'none' })
-                    document.querySelectorAll('input:invalid').forEach(node => { 
-                        if (node.value !== '') {
-                            node.previousElementSibling.querySelector('p').style.display = 'block' 
-                        }
-                    })
-                })
-            })
-        }
-    </script>
   </body>
 </html>
