@@ -212,10 +212,7 @@
 
     .error.itemLevel p {
         display: none;
-    }
-
-    .error.itemLevel {
-        margin-bottom: 16px;
+        margin: 8px 0;
     }
 
     .attrEntry {
@@ -224,7 +221,7 @@
         margin-bottom: 16px;
     }
 
-    .validate input:invalid {
+    .validate input:user-invalid {
         color: #ff4d4f;
         border: 1px solid #ff4d4f;
     }
@@ -257,5 +254,17 @@
             </div>
         </div>
     </div>
+    <script>
+        document.querySelectorAll('input').forEach((input) => {
+            input.addEventListener('input', () => {
+                document.querySelectorAll('input:valid').forEach(node => { node.previousElementSibling.querySelector('p').style.display = 'none' })
+                document.querySelectorAll('input:invalid').forEach(node => { 
+                    if (node.value !== '') {
+                        node.previousElementSibling.querySelector('p').style.display = 'block' 
+                    }
+                })
+            })
+        })
+    </script>
   </body>
 </html>
