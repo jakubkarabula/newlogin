@@ -7,12 +7,235 @@
     <base href="/">
     <link rel="shortcut icon" href="/favicon.ico">
     <title></title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Spartan:wght@300,400,500,600,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/jakubkarabula/newlogin/master/consumer-register.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body,
+html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+* {
+    font-family: "Spartan",sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    color: #393939;
+    margin-top: 80px;
+
+    background-image: url("https://raw.githubusercontent.com/jakubkarabula/newlogin/master/background-small.png");
+    background-size: contain;
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+a {
+    color: #b1d660;
+    text-decoration: none;
+}
+
+.wrapper {
+    padding: 20px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-flow: column nowrap;
+    -moz-box-pack: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.top-wrapper {
+    height: 80px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+}
+
+.top-shadow {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0) linear-gradient(180.6deg, rgba(0, 0, 0, 0.62) 0%, rgba(0, 0, 0, 0) 80%) repeat scroll 0% 0%;
+}
+
+.top-logo {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://raw.githubusercontent.com/jakubkarabula/newlogin/master/logo-white.png");
+    background-size: auto 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.page {
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    min-height: 100%;
+    border-radius: 20px 20px 0px 0px;
+    position: absolute;
+    top: 80px;
+}
+
+.subheader {
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.progress {
+    display: flex;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.progressbar {
+    height: 4px;
+    width: 100%;
+    background-color: rgb(229, 231, 238);
+    border-radius: 4px;
+    position: relative;
+}
+
+.progressbar::after {
+    content: "";
+    position: absolute;
+    background: rgb(153, 202, 59) none repeat scroll 0% 0%;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 50%;
+    border-radius: 4px;
+}
+
+.sign-in {
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    margin-top: 24px;
+    font-size: 14px;
+}
+
+button {
+    font-weight: 500;
+    border-radius: 10px;
+    height: 52px;
+    font-size: 16px;
+    color: #fff;
+    background: #99ca3b;
+    border-color: #99ca3b;
+    text-shadow: 0 -1px 0 rgba(0,0,0,.12);
+    -webkit-box-shadow: 0 2px 0 rgba(0,0,0,.045);
+    box-shadow: 0 2px 0 rgba(0,0,0,.045);
+    border: 0;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all .3s cubic-bezier(.645,.045,.355,1);
+    margin-top: 20px;
+}
+
+button:hover, button:active, button:focus, button:target {
+    color: #fff;
+    background: #b1d660;
+    border-color: #b1d660;
+}
+
+input {
+    line-height: 2;
+    color: #393939;
+    border: 1px solid #bfbfbf;
+    padding: 3px 11px;
+    border-radius: 10px;
+    font-size: 16px;
+    max-width: 400px;
+
+}
+
+.input::placeholder {
+    color: #bfbfbf;
+    opacity: 1;
+}
+.input:active {
+    border: 1px solid #99ca3b;
+}
+
+input::selection {
+    color: #fff;
+    background: #99ca3b;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.helpLink {
+    display: none;
+}
+
+.buttons {
+    display: flex;
+}
+
+.buttons button { 
+    flex: 1;
+}
+
+#cancel {
+    display: none;
+}
+
+.error {
+    color: #ff4d4f;
+}
+
+.error.itemLevel p {
+    display: none;
+    margin: 8px 0;
+}
+
+.error.itemLevel.show {
+    margin: 8px 0;
+}
+
+.attrEntry {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+.attrEntry label {
+    margin-bottom: 6px;
+}
+
+.validate input:user-invalid {
+    color: #ff4d4f;
+    border: 1px solid #ff4d4f;
+}
+
+.validate input:valid {
+    color: #393939;
+    border: 1px solid #bfbfbf;
+}
+    </style>
     <script src="https://raw.githubusercontent.com/jakubkarabula/newlogin/master/consumer-register.js"></script>
   </head>
   <body>
@@ -38,5 +261,21 @@
             </div>
         </div>
     </div>
+    <script>
+        console.log('INIT')
+        document.body.onload = () => {
+            console.log('ONLOAD')
+            document.querySelectorAll('input').forEach((input) => {
+                input.addEventListener('input', () => {
+                    document.querySelectorAll('input:valid').forEach(node => { node.previousElementSibling.querySelector('p').style.display = 'none' })
+                    document.querySelectorAll('input:invalid').forEach(node => { 
+                        if (node.value !== '') {
+                            node.previousElementSibling.querySelector('p').style.display = 'block' 
+                        }
+                    })
+                })
+            })
+        }
+    </script>
   </body>
 </html>
