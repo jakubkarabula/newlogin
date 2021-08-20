@@ -246,6 +246,14 @@ li {
     display: block;
 }
 
+.validate #newPassword:invalid + a::after {
+    content: 'Invalid password format. It must contain at least 8 characters and have special character and number.';
+    color: #ff4d4f;
+    font-size: 1rem;
+    margin-top: 8px;
+    display: block;
+}
+
     </style>
     <script src="https://raw.githubusercontent.com/jakubkarabula/newlogin/master/consumer-register.js"></script>
   </head>

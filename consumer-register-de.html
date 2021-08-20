@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <style>
-        body,
+                body,
 html {
     height: 100%;
     padding: 0;
@@ -188,7 +188,7 @@ li {
 }
 
 .helpLink {
-    display: none;
+    font-size: 0;
 }
 
 .buttons {
@@ -207,9 +207,12 @@ li {
     color: #ff4d4f;
 }
 
+.error.itemLevel {
+    display: none;
+}
+
 .error.itemLevel p {
     display: none;
-    margin: 8px 0;
 }
 
 .error.itemLevel.show {
@@ -234,6 +237,22 @@ li {
 .validate input:valid {
     color: #393939;
     border: 1px solid #bfbfbf;
+}
+
+.validate #email:invalid + a::after {
+    content: 'Das Format der E-Mail-Adresse ist ungültig.';
+    color: #ff4d4f;
+    font-size: 1rem;
+    margin-top: 8px;
+    display: block;
+}
+
+.validate #newPassword:invalid + a::after {
+    content: 'Das Passwort ist ungültig. Es muss mindestens 8 Zeichen lang sein und ein Sonderzeichen und eine Zahl enthalten.';
+    color: #ff4d4f;
+    font-size: 1rem;
+    margin-top: 8px;
+    display: block;
 }
     </style>
     <script src="https://raw.githubusercontent.com/jakubkarabula/newlogin/master/consumer-register.js"></script>
