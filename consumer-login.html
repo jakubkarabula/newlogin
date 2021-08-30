@@ -122,12 +122,17 @@ a {
     border-radius: 4px;
 }
 
-.sign-in {
+.sign-up {
     display: flex;
     -moz-box-pack: center;
     justify-content: center;
     margin-top: 24px;
     font-size: 14px;
+    z-index: 1;
+}
+
+.sign-up a {
+    margin-left: 5px;
 }
 
 button {
@@ -275,6 +280,13 @@ li {
         <div class="wrapper">
             <div id="api"></div>
         </div>
+    </div>
+
+    <div class="sign-up">
+        Sie haben kein Konto?
+        <a href="https://hfgo.b2clogin.com/hfgo.onmicrosoft.com/oauth2/v2.0/authorize?p=B2C_1_ConsumerPortal&client_id=572022bb-a46f-4e9b-9935-155a671b4572&nonce=defaultNonce&redirect_uri=https%3A%2F%2Fconsumers-portal.k8s.live.hellofreshgo.io%2Fqr&scope=openid&response_type=id_token&prompt=login&ui_locales=de">
+            Registrieren
+        </a>
     </div>
   </body>
 </html>
